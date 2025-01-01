@@ -14,8 +14,41 @@ body{
 }
 
 /* menu base styles */
+nav {
+    background: #333;
+}
 
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
 
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 10px;
+}
 
+/* psudo classes */
+nav a:hover {
+    background-color: #555;
+}
 
 /* flex styles */
+
+@media screen and (min-width: 760px) {
+    /* ul will be flex container and li will be flex items */
+    /* this will make the menu horizontal */
+    nav ul {
+        display: flex;
+        justify-content: flex-end; /* align items to center/right/left 
+        (dont use flex grow/shrink/basis on item in this class)*/
+        gap: 30px;
+    }
+
+    nav li {
+        //flex: 1 1 0; /* grow shrink basis */
+    }
+}

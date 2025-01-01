@@ -37,8 +37,36 @@ nav a:hover{
 }
 
 /* social menu base styles */
+a.tw {
+  background: url(img/tw.png) no-repeat center center; 
+  background-size: 80%;
+}
+
+a.fb {
+  background: url(img/fb.png) no-repeat center center; 
+  background-size: 80%;
+}
+
+.social a{ /* hide text */
+  text-indent: -10000px;
+}
+
+.social { /* keep social icons the same size, 80px */
+  max-width: 80px;
+  margin: 0 auto; /* Center social icons */
+}
+
 
 /* flex styles */
+
+nav ul.social {
+  display: flex;
+  flex: 1 1 0;
+}
+
+nav ul.social li{
+  flex: 1 1 0;
+}
 
 @media screen and (min-width: 768px){
 
@@ -48,6 +76,15 @@ nav ul{
 
 nav li{
   flex: 1 1 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* space between menu items */
+}
+
+.social {
+  margin: 0; /* remove margin to no longer center it for larger screen */
 }
     
 } /* end media 768 */

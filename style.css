@@ -10,18 +10,22 @@ body{
 .wrapper{ /* Wrapper keeps content in the center, max width is 960px here*/
     width: 100%; /* fills 100% of max width */
     max-width: 1200px; /* container max width */
-    margin: 10px auto; /* container margins - top and bottom, left and right */
+    margin: 0 auto; /* container margins - top and bottom, left and right */
 }
 
 .flex-container{ /* Apply flex to container, allows flexbox inside of block level (entire row) */
     display: flex; /* flexbox */
     background: white; /* container background color, to see entire container */
     flex-wrap: wrap; /* allows flexbox to go to next line */
+    flex-flow: column; /* flex direction */
+    justify-content: center; /* align items on main axis */
+    height: 600px;
+    align-items: flex-end; /* align items on cross axis */
 }
 
 .box { /* Apply flex to all direct children */
-    height: 100px;
-    flex: 1 0 200px /* flex: flex-grow, flex-shrink, flex-basis (wrap at) */
+    width: 100px; /* height vs width, one for flex flow row and the other vv*/
+    flex: 0 0 100px /* flex: flex-grow, flex-shrink, flex-basis (wrap at) */
 }
 
 .one {
